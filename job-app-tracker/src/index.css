@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-transform: capitalize;
+}
+
+small {
+  color: rgb(63, 61, 61);
+  font-style: italic;
+}
+
+button.btn.btn-warning.mt-2 {
+  background: green;
+  color: white;
+  border: none;
+  font-size: 12px;
+}
+
+button.mt-4.bg-blue-500 {
+  background: #3b2d12;
+  border: none;
+  font-size: 14px;
+}
+
+label.block.font-bold {
+  padding-right: 10px;
+}
+
+.form-job input {
+  margin: 10px;
+}

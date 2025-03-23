@@ -57,8 +57,8 @@ const EditJobStatus: React.FC = () => {
           onChange={handleChange}
           className="w-full p-2 border rounded"
         >
-          <option value="applied">Applied</option>
-          <option value="waiting">Waiting</option>
+          <option value="applied">Interview</option>
+          <option value="waiting">Offer</option>
           <option value="rejected">Rejected</option>
         </select>
       </div>

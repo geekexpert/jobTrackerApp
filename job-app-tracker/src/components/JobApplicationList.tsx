@@ -38,7 +38,7 @@ const JobApplicationList: React.FC = () => {
                         <li key={job.id} className="mb-3">
                             <strong>{job.position}</strong> at {job.company} - {job.status}
                             <br />
-                            <small>Applied on: {new Date(job.applicationDate).toDateString()}</small>
+                            <small>Added on: {new Date(job.applicationDate).toDateString()}</small>
                             <br />
                             <button 
                                 className="btn btn-warning mt-2"

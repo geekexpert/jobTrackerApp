@@ -3,9 +3,11 @@ import { useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../redux/store";
 import { fetchJobApplications } from "../redux/jobApplicationSlice";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddJobApplication: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         company: "",
@@ -36,6 +38,7 @@ const AddJobApplication: React.FC = () => {
                 status: "applied",
                 applicationDate: new Date().toISOString().split("T")[0],
             });
+            navigate("/");
         } catch (error) {
             console.error("Error adding job application:", error);
         }
@@ -43,7 +46,7 @@ const AddJobApplication: React.FC = () => {
 
     return (
         <form onSubmit={handleSubmit} className="p-4 border rounded shadow-md">
-            <div>
+            <div className = "form-job">
                 <label className="block font-bold">Company</label>
                 <input
                     type="text"
@@ -54,7 +57,7 @@ const AddJobApplication: React.FC = () => {
                     className="w-full p-2 border rounded"
                 />
             </div>
-            <div>
+            <div className = "form-job">
                 <label className="block font-bold">Position</label>
                 <input
                     type="text"
@@ -65,7 +68,7 @@ const AddJobApplication: React.FC = () => {
                     className="w-full p-2 border rounded"
                 />
             </div>
-            <div>
+            <div className = "form-job">
                 <label className="block font-bold">Status</label>
                 <select
                     name="status"
@@ -73,12 +76,12 @@ const AddJobApplication: React.FC = () => {
                     onChange={handleChange}
                     className="w-full p-2 border rounded"
                 >
-                    <option value="applied">Applied</option>
-                    <option value="waiting">Waiting</option>
+                    <option value="applied">Interview</option>
+                    <option value="waiting">Offer</option>
                     <option value="rejected">Rejected</option>
                 </select>
             </div>
-            <div>
+            <div className = "form-job">
                 <label className="block font-bold">Application Date</label>
                 <input
                     type="date"
