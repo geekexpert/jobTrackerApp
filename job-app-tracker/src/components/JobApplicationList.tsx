@@ -20,25 +20,35 @@ const JobApplicationList: React.FC = () => {
 
     return (
         <div>
-            <h2>Job Applications</h2>
+            <h2>Total Applications</h2>
+
+            <button
+                className="btn btn-primary mb-3"
+                onClick={() => navigate("/add")}
+            >
+                Add Job Application
+            </button>
 
             <ul>
-                <button
-                    onClick={() => navigate("/add")}
-                >
-                    Add
-                </button>
-                {jobs.map((job) => (
-                    <li key={job.id}>
-                        <strong>{job.position}</strong> at {job.company} - {job.status}
-                        <br />
-                        <small>Applied on: {new Date(job.applicationDate).toDateString()}</small>
-                        <br />
-                        <button onClick={() => navigate(`/edit/${job.id}`)}>
-                            Edit Status
-                        </button>
-                    </li>
-                ))}
+                
+                {jobs.length === 0 ? (
+                    <p>No job applications listed.</p>
+                ) : (
+                    jobs.map((job) => (
+                        <li key={job.id} className="mb-3">
+                            <strong>{job.position}</strong> at {job.company} - {job.status}
+                            <br />
+                            <small>Applied on: {new Date(job.applicationDate).toDateString()}</small>
+                            <br />
+                            <button 
+                                className="btn btn-warning mt-2"
+                                onClick={() => navigate(`/edit/${job.id}`)}
+                            >
+                                Edit Status
+                            </button>
+                        </li>
+                    ))
+                )}
             </ul>
         </div>
     );
