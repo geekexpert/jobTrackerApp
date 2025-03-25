@@ -157,3 +157,4 @@
 /Users/johnsilva/Documents/Tutorials/MyApi/obj/Debug/net8.0/MyApi.genruntimeconfig.cache
 /Users/johnsilva/Documents/Tutorials/MyApi/obj/Debug/net8.0/ref/MyApi.dll
 /Users/johnsilva/Documents/Tutorials/MyApi/obj/Debug/net8.0/MyApi.csproj.CopyComplete
+/Users/johnsilva/Documents/Tutorials/MyApi/obj/Debug/net8.0/MyApi.sourcelink.json

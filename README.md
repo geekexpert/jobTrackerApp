@@ -1,3 +1,4 @@
+## Please use master branch only :) 
 # Job Tracker App
 
 This is a basic full-stack application that includes a **RESTful API** built with **ASP.NET Core 8**, **SQLite**, and **Entity Framework**, 
