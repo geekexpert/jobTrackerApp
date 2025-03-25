@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const API_URL = "https://localhost:8484/api/JobApplication";
-
+// create slices which are sent as reducers 
+// This required to be in a interface file, duplicated for time being 
 interface JobApplication {
   id: number;
   company: string;
@@ -26,6 +27,7 @@ const initialState: JobApplicationState = {
 };
 
 
+// get all the jobs from Database
 export const fetchJobApplications = createAsyncThunk<JobApplication[]>(
   "jobApplications/fetchJobApplications",
   async (_, { rejectWithValue }) => {

@@ -12,6 +12,7 @@ const App: React.FC = () => {
     <Router> 
       <div className="App container">
         <h1 className="text-primary">Job Application Tracker</h1>
+        {/* This is the routing for the app. Probably not the best place to put but here for the moment */}
         <Routes>
           <Route path="/" element={<JobApplicationList />} /> 
           <Route path="/add" element={<AddJobApplication />} /> 

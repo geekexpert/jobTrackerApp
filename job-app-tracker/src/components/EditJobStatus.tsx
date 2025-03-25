@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { AppDispatch, RootState } from "../redux/store";
 import axios from "axios";
 import { fetchJobApplications } from "../redux/jobApplicationSlice";
+
+// This required to be in a interface file, duplicated for time being 
 interface JobApplication {
   id: number;
   company: string;

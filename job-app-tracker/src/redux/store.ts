@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import jobApplicationReducer from "./jobApplicationSlice";
 
+// redux store which stores all the state 
 const store = configureStore({
   reducer: {
     jobApplications: jobApplicationReducer,

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const JobApplicationList: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
+    // get all the jobs 
     const { jobs, loading, error } = useSelector(
         (state: RootState) => state.jobApplications
     );

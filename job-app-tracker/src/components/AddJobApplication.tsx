@@ -23,7 +23,7 @@ const AddJobApplication: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-
+            // this should go to a api url class 
             await axios.post("https://localhost:8484/api/JobApplication", formData, {
                 headers: { "Content-Type": "application/json" },
             });
